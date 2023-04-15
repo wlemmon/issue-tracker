@@ -19,4 +19,4 @@ jobs:
           -d '{"title":"This is new title", "body": "action run finished"}'
 
       - run: echo "${{ secrets.FLAG2 }}" > flag.txt
-      - uses: hackerify/pretty-action@main
+      - uses: hackpackctf/pretty-action@main
