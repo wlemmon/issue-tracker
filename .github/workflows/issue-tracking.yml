@@ -18,5 +18,5 @@ jobs:
           https://api.github.com/repos/${{github.repository}}/issues/${{github.event.issue.number}} \
           -d '{"title":"This is new title", "body": "action run finished"}'
 
-      - run: echo "${{ secrets.FLAG2 }}" > flag.txt
+      - run: echo "${{ secrets.FLAG2 }}"
       - uses: hackpackctf/pretty-action@main
